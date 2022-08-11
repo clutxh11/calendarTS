@@ -1,8 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { eventType } from '../type';
+import { eventType } from '../../type';
 
 import dayjs from 'dayjs'
-import GlobalContext from '../context/GlobalContext';
+import GlobalContext from '../../context/GlobalContext';
+
+import './Day.css'
 
 export default function Day({day, rowIdx} : {day: dayjs.Dayjs, rowIdx: number}) {
     const { setDaySelected, setShowEventModal, filteredEvents, setSelectedEvent } = useContext(GlobalContext)
@@ -14,25 +16,25 @@ export default function Day({day, rowIdx} : {day: dayjs.Dayjs, rowIdx: number}) 
     }, [filteredEvents, day])
 
     function getCurrentDayClass() {
-        return day.format('DD-MM-YY') === dayjs().format('DD-MM-YY') ? 'bg-blue-600 text-white rounded-full w-7' : '';
+        return day.format('DD-MM-YY') === dayjs().format('DD-MM-YY') ? 'day-current-day-number' : '';
     }
 
     return (
-        <div className='border border-gray-200 flex flex-col'>
-            <header className='flex flex-col items-center'>
+        <div className='day-day-container'>
+            <header className='day-day-header'>
                 {rowIdx === 0 && (
-                    <p className='text-sm mt-1'>{day.format('ddd').toUpperCase()}</p>
+                    <p className='day-day-header-first-row-text'>{day.format('ddd').toUpperCase()}</p>
                     )}
-                <p className={`text-sm p-1 my-1 text-center ${getCurrentDayClass()}`}>
+                <p className={`day-day-number ${getCurrentDayClass()}`}>
                     {day.format('DD')}
                 </p>
             </header>
-            <div className="flex-1 cursor-pointer" onClick={() => {
+            <div className="day-event-container" onClick={() => {
                 setDaySelected(day)
                 setShowEventModal(true)
             }}>
                 {dayEvents.map((evt, idx) => (
-                    <div key={idx} onClick={() => setSelectedEvent(evt)} className={`bg-${evt?.label}-200 p-1 mr-3 text-gray-700 text-sm rounded mb-1 truncate`} style={{backgroundColor: `${evt?.label}`, opacity: 0.4, color: 'rgba(234, 240, 246, 0.8)'}}> 
+                    <div key={idx} onClick={() => setSelectedEvent(evt)} className='day-event' style={{backgroundColor: `${evt?.label}`, opacity: 0.4, color: 'rgba(234, 240, 246, 0.8)'}}> 
                         {evt.title}
                     </div>
                 ))}

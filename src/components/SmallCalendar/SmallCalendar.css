@@ -1,0 +1,75 @@
+.small-calendar-container {
+    margin-top: 2.25rem;
+}
+
+.small-calendar-header {
+    justify-content: space-between;
+    display: flex;
+}
+
+.small-calendar-header-date {
+    --tw-text-opacity: 1;
+    color: rgb(107 114 128 / var(--tw-text-opacity));
+    font-weight: 700;
+}
+
+.small-calendar-header-icons {
+    --tw-text-opacity: 1;
+    color: rgb(75 85 99 / var(--tw-text-opacity));
+    cursor: pointer;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    font-family: 'Material Icons Outlined';
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+}
+
+.small-calendar-body-container {
+    grid-template-rows: repeat(6, minmax(0, 1fr));
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    display: grid;
+}
+
+.small-calendar-body-first-row-span {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    text-align: center;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+
+.small-calendar-body-button {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    width: 100%;
+}
+
+.small-calendar-body-button-span {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.small-calendar-body-current-day {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    --tw-bg-opacity: 1;
+    background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+    border-radius: 9999px;
+    width: 100%;
+}
+
+.small-calendar-body-selected-day {
+    --tw-text-opacity: 1;
+    color: rgb(37 99 235 / var(--tw-text-opacity));
+    font-weight: 700;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    --tw-bg-opacity: 1;
+    background-color: rgb(219 234 254 / var(--tw-bg-opacity));
+    border-radius: 9999px;
+    width: 100%;
+}

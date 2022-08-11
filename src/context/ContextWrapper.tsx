@@ -50,21 +50,21 @@ export default function ContextWrapper({children}: ContextWrapperProps) {
         localStorage.setItem("savedEvents", JSON.stringify(savedEvents));
     }, [savedEvents]);
 
-    useEffect (() => {
-        let tempLabel: labelType[] = []
-        const tempLabelFn = () => {
-            const tempSet = new Set( savedEvents.map(evt => evt.label))
-            return tempLabel = Array.from(tempSet).map(label => {
-                const currentLabel = labels.find(lbl => lbl.label === label)
-                return {
-                    label,
-                    checked: currentLabel ? currentLabel.checked : true
-                } as labelType
-            })
-        }
-        console.log(tempLabel)
-        setLabels(tempLabel)
-    }, [savedEvents])
+    useEffect(() => {
+        setLabels((prevLabels) => {
+          return Array.from(new Set(savedEvents.map((evt) => evt.label))).map(
+            (label) => {
+              const currentLabel = prevLabels.find(
+                (lbl) => lbl.label === label
+              );
+              return {
+                label,
+                checked: currentLabel ? currentLabel.checked : true,
+              };
+            }
+          );
+        });
+      }, [savedEvents]);
 
     useEffect(() => {
         if(smallCalendarMonth !== null) {

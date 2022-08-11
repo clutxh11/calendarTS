@@ -1,0 +1,116 @@
+.event-modal-container {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+}
+
+.event-modal-form {
+    --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    border-radius: 0.5rem;
+    width: 25%;
+}
+
+.event-modal-header {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    --tw-bg-opacity: 1;
+    background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+.event-modal-icons {
+    --tw-text-opacity: 1;
+    color: rgb(156 163 175 / var(--tw-text-opacity));
+    font-family: 'Material Icons Outlined';
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    cursor: pointer;
+}
+
+.event-modal-body-container-container {
+    padding: 0.75rem;
+}
+
+.event-modal-body-container {
+    row-gap: 1.75rem;
+    align-items: flex-end;
+    grid-template-columns: 1fr 5fr;
+    display: grid;
+}
+
+.event-modal-body-input {
+    --tw-text-opacity: 1;
+    color: rgb(75 85 99 / var(--tw-text-opacity));
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    padding-bottom: 0.5rem;
+    padding-top: 0.75rem;
+    --tw-border-opacity: 1;
+    border-color: rgb(229 231 235 / var(--tw-border-opacity));
+    border-bottom-width: 2px;
+    border-width: 0px;
+    width: 100%;
+}
+
+.event-modal-body-colors-container {
+    column-gap: 0.5rem;
+    display: flex;
+}
+
+.event-modal-body-color-span {
+    border-radius: 9999px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+}
+
+.event-modal-body-color-icon {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-family: 'Material Icons Outlined';
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+}
+
+.event-modal-footer-container {
+    padding: 0.75rem;
+    border-top-width: 1px;
+    justify-content: flex-end;
+    display: flex;
+    margin-top: 1.25rem;
+}
+
+.event-modal-footer-button {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    --tw-bg-opacity: 1;
+    background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+    border-radius: 0.25rem;
+}

@@ -1,11 +1,11 @@
 import React, { useState, useContext, useEffect } from 'react';
 
 import { getMonth } from './util'
-import CalendarHeader from './components/CalendarHeader';
-import Sidebar from './components/Sidebar';
-import Month from './components/Month';
+import CalendarHeader from './components/CalendarHeader/CalendarHeader';
+import Sidebar from './components/Sidebar/Sidebar';
+import Month from './components/Month/Month';
 import GlobalContext from './context/GlobalContext';
-import EventModal from './components/EventModal';
+import EventModal from './components/EventModal/EventModal';
 
 import './App.css';
 
@@ -20,9 +20,9 @@ function App() {
   return (
     <React.Fragment>
       {showEventModal && <EventModal />}
-      <div className='h-screen flex flex-col'>
+      <div className='app-container'>
         <CalendarHeader />
-          <div className='flex flex-1'>
+          <div className='app-contents-container'>
             <Sidebar />
             <Month month={currentMonthCount} />
           </div>

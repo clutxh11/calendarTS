@@ -1,10 +1,12 @@
 import dayjs, { Dayjs } from 'dayjs'
 import React from 'react'
-import Day from './Day'
+import Day from '../Day/Day'
+
+import './Month.css'
 
 export default function Month({month}:{month: dayjs.Dayjs[][]}) {
   return (
-    <div className='flex-1 grid grid-cols-7 grid-rows-6'>
+    <div className='month-container'>
         {month.map((row, i) => (
             <React.Fragment key={i}>
                 {row.map((day, idx) => (

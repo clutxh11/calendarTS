@@ -1,0 +1,58 @@
+.day-day-number {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    text-align: center;
+    padding: 0.25rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.day-current-day-number {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+    --tw-bg-opacity: 1;
+    background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+    border-radius: 9999px;
+    width: 1.75rem;
+}
+
+.day-day-container {
+    --tw-border-opacity: 1;
+    border-color: rgb(229 231 235 / var(--tw-border-opacity));
+    border-width: 1px;
+    flex-direction: column;
+    display: flex;
+}
+
+.day-day-header {
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
+
+.day-day-header-first-row-text {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin-top: 0.25rem;
+}
+
+.day-event-container {
+    cursor: pointer;
+    flex: 1 1;
+}
+
+.day-event {
+    opacity: 0.4;
+    color: 'rgba(234, 240, 246, 0.8)';
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    margin-bottom: 0.25rem;
+    margin-right: 0.75rem;
+}

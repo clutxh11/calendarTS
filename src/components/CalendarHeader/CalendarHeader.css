@@ -1,0 +1,55 @@
+.calendar-header-container {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    align-items: center;
+    display: flex;
+}
+
+.calendar-header-image {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 0.5rem;
+}
+
+.calendar-header-title {
+    --tw-text-opacity: 1;
+    color: rgb(107 114 128 / var(--tw-text-opacity));
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    margin-right: 2.5rem;
+}
+
+.calendar-header-today-button {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-width: 1px;
+    border-radius: 0.25rem;
+    margin-right: 1.25rem;
+}
+
+.calendar-header-nav-icons {
+    --tw-text-opacity: 1;
+    color: rgb(75 85 99 / var(--tw-text-opacity));
+    cursor: pointer;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    font-family: 'Material Icons Outlined';
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 1;
+}
+
+.calendar-header-date {
+    margin-left: 1rem;
+    --tw-text-opacity: 1;
+    color: rgb(107 114 128 / var(--tw-text-opacity));
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    margin-left: 1rem;
+}

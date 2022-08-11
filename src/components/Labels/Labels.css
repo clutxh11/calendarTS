@@ -1,0 +1,26 @@
+.labels-text {
+    --tw-text-opacity: 1;
+    color: rgb(107 114 128 / var(--tw-text-opacity));
+    font-weight: 700;
+    margin-top: 2.5rem;
+}
+
+.labels-label {
+    align-items: center;
+    display: block;
+    margin-top: 0.75rem;
+}
+
+.labels-input {
+    border-radius: 0.25rem;
+    cursor: pointer;
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.labels-label-text {
+    --tw-text-opacity: 1;
+    color: rgb(55 65 81 / var(--tw-text-opacity));
+    text-transform: capitalize;
+    margin-left: 0.5rem;
+}

@@ -2,8 +2,10 @@ import React, { useContext, useEffect, useState } from 'react'
 
 import dayjs from 'dayjs'
 
-import { getMonth } from '../util'
-import GlobalContext from '../context/GlobalContext'
+import { getMonth } from '../../util'
+import GlobalContext from '../../context/GlobalContext'
+
+import './SmallCalendar.css'
 
 export default function SmallCalendar() {
     const [currentMonthIdx, setCurrentMonthIdx] = useState(dayjs().month())
@@ -32,36 +34,36 @@ export default function SmallCalendar() {
         const currDay = day.format(format)
         const slcDay = daySelected && daySelected.format(format)
         if(nowDay === currDay) {
-            return 'bg-blue-500 rounded-full text-white'
+            return 'small-calendar-body-current-day'
         }else if (currDay === slcDay) {
-            return 'bg-blue-100 rounded-full text-blue-600 font-bold'
+            return 'small-calendar-body-selected-day'
         }else {
             return ''
         }
     }
 
     return (
-        <div className='mt-9'>
-            <header className="flex justify-between">
-                <p className="text-gray-500 font-bold">
+        <div className='small-calendar-container'>
+            <header className="small-calendar-header">
+                <p className="small-calendar-header-date">
                     {dayjs(new Date(dayjs().year(), currentMonthIdx)).format('MMMM YYYY')}
                 </p>
                 <div>
                     <button onClick={handlePrevMonth}>
-                        <span className="material-icons-outlined cursor-pointer text-gray-600 mx-2">
+                        <span className="small-calendar-header-icons">
                             chevron_left
                         </span>
                     </button>
                     <button onClick={handleNextMonth}>
-                        <span className="material-icons-outlined cursor-pointer text-gray-600 mx-2">
+                        <span className="small-calendar-header-icons">
                             chevron_right
                         </span>
                     </button>
                 </div>
             </header>
-            <div className="grid grid-cols-7 grid-row-6">
+            <div className="small-calendar-body-container">
                 {currentMonth[0].map((day, i) => (
-                    <span key={i} className='text-sm py-1 text-center'>
+                    <span key={i} className='small-calendar-body-first-row-span'>
                         {day.format('dd').charAt(0)}
                     </span>
                 ))}
@@ -73,8 +75,8 @@ export default function SmallCalendar() {
                                 setSmallCalendarMonth(currentMonthIdx)
                                 setDaySelected(day)
                             }} 
-                            key={idx} className={`py-1 w-full ${getDayClass(day)}`}>
-                                <span className='text-sm'>
+                            key={idx} className={`small-calendar-body-button ${getDayClass(day)}`}>
+                                <span className='small-calendar-body-button-span'>
                                     {day.format('D')}
                                 </span>
                             </button>
